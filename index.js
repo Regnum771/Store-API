@@ -15,7 +15,7 @@ app.use(cors({
 
 // Utility
 const dotenv = require('dotenv')
-dotenv.config({path: './config/local.env'})
+dotenv.config({path: './config/production.env'})
 const fetch =  require("node-fetch")
 
 // Route
