@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Document
+    </title>
+</head>
+<body>
+    <div><a href="/products">Product</a></div>
+    <div><a href="/">Home Page</a></div>
+    
+    <td><%= product.name %></td>
+    <td><%= product.price %></td>
+    <td><%= product.brand %></td>
+
+    <form method = "POST" id = "form" action = "/carts/new">
+        <label for = "quantity">Quantity</label><br>
+        <input type = "number" name = "quantity" value = "1"><br>
+        <input type = "hidden" name = "id" value = "<%= id %>">
+        <input type = "hidden" name = "name" value = "<%= product.name %>">
+        <input type = "submit" value = "Add to cart">
+    </form>
+</body>
+</html>

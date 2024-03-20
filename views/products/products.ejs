@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Document
+    </title>
+</head>
+<body>
+  <div><a href="/products">Product</a></div>
+  <div><a href="/">Home Page</a></div>
+
+  <table>
+      <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Brand</th>
+      </tr>
+      <% Object.entries(product_data).forEach(([k,v]) => { %>
+        <tr>
+          <td><a href = <%="/products/" + k%>><%= v.name %></a></td>
+          <td><%= v.price %></td>
+          <td><a href = <%="/products/brand/" + v.brand%>><%= v.brand %></a></td>
+        </tr>
+      <% }) %>
+  </table>
+
+
+</body>
+</html>
